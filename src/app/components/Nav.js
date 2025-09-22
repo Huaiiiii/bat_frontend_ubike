@@ -120,9 +120,10 @@ const Nav = () => {
                       selected={pathname === item.link}
                       sx={{
                         color: "white",
-                        fontWeight: "bold",
-                        fontSize: "1.125rem",
-                        "&.Mui-selected": { color: "#677511" },
+                        "&.Mui-selected": {
+                          color: "#677511",
+                          bgcolor: "transparent",
+                        },
                       }}
                       onClick={() => setOpen(false)}
                     >
@@ -131,17 +132,17 @@ const Nav = () => {
                   </ListItem>
                 ))}
               </List>
+              <div className="flex-1" />
               <Button
                 variant="contained"
                 sx={{
                   bgcolor: "white",
                   color: "#b2cc3a",
-                  px: 8,
-                  py: 1,
+                  px: 2,
                   borderRadius: 999,
-                  fontWeight: 500,
-                  mt: 8,
+                  fontWeight: "bold",
                   mb: 6,
+                  ml: 2,
                   alignSelf: "flex-start",
                   boxShadow: "none",
                   "&:hover": { bgcolor: "#f4f4f4" },
